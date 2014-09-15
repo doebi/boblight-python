@@ -1,14 +1,17 @@
+#!/usr/bin/env python2
 from lib import Boblight
 import time
 import ctypes
 
-bob = Boblight()
+# Settings
+# will/should be replaced with command line options
 boblightd_IP = "192.168.1.111"
 boblightd_PORT = 19333
+boblightd_PRIORITY = 128
+
+bob = Boblight()
 
 bob.bob_loadLibBoblight("/usr/local/lib/libboblight.so", "linux")
-
-print bob.libboblight
 
 connected = bob.bob_connect(boblightd_IP, boblightd_PORT)
 
@@ -84,14 +87,12 @@ def equalizer(level):
     bob.bob_set_priority(128)
     bob.bob_sendrgb()
 
-"""
 while True:
     try:
         #demo_RGB()
-        #rainbow()
+        rainbow()
         #swipe(Color(255, 90, 0))
         #swipe(Color(0, 90, 255))
         test()
     except KeyboardInterrupt:
         exit()
-"""
