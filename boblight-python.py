@@ -1,4 +1,4 @@
-from .lib.boblight import Boblight
+from lib import Boblight
 import time
 import ctypes
 
