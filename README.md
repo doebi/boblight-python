@@ -12,3 +12,6 @@ The default mode is a rainbow.
 chmod +x boblight-python.py
 ./boblight-python.py
 ```
+
+#TODO
+refactor, split into modules, packages
